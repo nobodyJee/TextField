@@ -21,25 +21,25 @@
         }
         if (textField) {
             NSString *text = textField.text;
-            if ([string isEqualToString:@""]) {
+            if ([string isEqualToString:@""]) { // 删除
                 if (range.length == 1) {// 删除一位
                     if (range.location == text.length - 1) { // location是下标 此句表示删除的最后一位
                         return YES;
-                    } else { // 删除的多位
-                        NSInteger locationOffset = range.location;
+                    } else { // 不是最后一位
+                        NSInteger offset = range.location;
                         if (range.location < text.length && [text characterAtIndex:range.location] == ' ' && [textField.selectedTextRange isEmpty]) {
                             [textField deleteBackward];
-                            locationOffset --;
+                            offset --;
                         }
                         [textField deleteBackward];
                         textField.text = [self insertString:textField.text withBlankLocations:blankLocation];
                         //设置光标的位置
-                        [self setCursorLocation:textField withOffset:locationOffset];
+                        [self setCursorLocation:textField withOffset:offset];
                         return NO;
                     }
                 } else if (range.length > 1) {
                     BOOL lastOne = NO;
-                    if (range.location + range.length == text.length) {
+                    if (range.location + range.length == text.length) {//是否是最后一位
                         lastOne = YES;
                     }
                     [textField deleteBackward];
@@ -84,13 +84,13 @@
     if (!string) {
         return nil;
     }
-    NSMutableString* tStr = [NSMutableString stringWithString:[string stringByReplacingOccurrencesOfString:@" " withString:@""]];
+    NSMutableString* mutableString = [NSMutableString stringWithString:[string stringByReplacingOccurrencesOfString:@" " withString:@""]];
     for (NSNumber *location in locations) {
-        if (tStr.length > location.integerValue) {
-            [tStr insertString:@" " atIndex:location.integerValue];
+        if (mutableString.length > location.integerValue) {
+            [mutableString insertString:@" " atIndex:location.integerValue];
         }
     }
-    return  tStr;
+    return  mutableString;
 }
 
 // 去除空格
