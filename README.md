@@ -44,3 +44,5 @@ textField中输入的空格格式化
 
 
 ```
+具体实现原理在这
+[我是 blog 点我](http://www.jianshu.com/p/5175402109d5)
