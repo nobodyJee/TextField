@@ -46,3 +46,5 @@ textField中输入的空格格式化
 ```
 具体实现原理在这
 [我是 blog 点我](https://juejin.im/post/5a527443f265da3e324551ee)
+
+![image](https://github.com/JiWuChao/TextField/blob/master/textField.gif)
