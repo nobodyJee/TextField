@@ -45,7 +45,8 @@
     if (!_textBankNumber) {
         _textBankNumber = [[UITextField alloc] initWithFrame:CGRectMake(50, 100, 250, 30)];
         _textBankNumber.delegate = self;
-        _textBankNumber.backgroundColor = [UIColor lightGrayColor];
+        _textBankNumber.backgroundColor = [UIColor whiteColor];
+        _textBankNumber.borderStyle = UITextBorderStyleRoundedRect;
         _textBankNumber.keyboardType = UIKeyboardTypeNumberPad;
         _textBankNumber.placeholder = @"请输入~~";
         [self.view addSubview:_textBankNumber];
