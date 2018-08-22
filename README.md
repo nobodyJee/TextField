@@ -45,6 +45,6 @@ textField中输入的空格格式化
 
 ```
 具体实现原理在这
-[我是 blog 点我](https://juejin.im/post/5a527443f265da3e324551ee)
+[我是 blog 点我](http://www.wuchao.net.cn/2018/01/10/TextField%E8%BE%93%E5%85%A5%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7%E6%89%8B%E6%9C%BA%E5%8F%B7%E9%93%B6%E8%A1%8C%E5%8D%A1%E5%8F%B7%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%20/)
 
 ![image](https://github.com/JiWuChao/TextField/blob/master/textField.gif)
